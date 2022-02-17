@@ -20,6 +20,11 @@
   - [Manejo de Excepciones](#manejo-de-excepciones)
     - [Excepciones Como Control de Flujo](#excepciones-como-control-de-flujo)
   - [Afirmaciones](#afirmaciones)
+- [POO](#poo)
+  - [Tipos de Datos Abstractos](#tipos-de-datos-abstractos)
+  - [Instancias](#instancias)
+  - [Decomposición](#decomposición)
+  - [Abstracción](#abstracción)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -231,3 +236,75 @@ def primera_letra(lista_de_palabras):
 
     return primeras_letras
 ```
+
+## POO
+
+### Tipos de Datos Abstractos
+
+- En Python todo es un objeto y tiene un tipo
+  - Representación de datos y formas de interactuar con ellos
+- Formas de interactuar con un objeto:
+  - Creación
+  - Manipulación
+  - Destrucción
+- Ventajas:
+  - Decomposición
+  - Abstracción
+  - Encapsulación
+
+**Ejemplo:**
+
+```python
+# Definición de clase
+
+class <nombre_de_la_clase>(<super_clase>):
+
+    def __init__(self, <params>):
+        <expresion>
+
+    def <nombre_del_metodo>(self, <params>):
+        <expresion>
+```
+
+```python
+# Definición
+class Persona:
+
+    def __init__(self, nombre, edad):
+      self.nombre = nombre
+      self.edad = edad
+
+    def saluda(self, otra_persona):
+      return f'Hola {otra_persona.nombre}, me llamo {self.nombre}.'
+
+# Uso
+>>> david = Persona('David', 35)
+>>> erika = Persona('Erika', 32)
+
+>>> david.saluda(erika)
+'Hola Erika, me llamo David'
+```
+
+### Instancias
+
+- Mientras que la clase es un molde, a los objetos creados se les conoce como instancias
+- Cuando se crea una instancia, se ejecuta el método `__init__`
+- Todos los métodos de una clase reciben implícitamente como primer parámetro `self`
+- Los atributos de clase nos permite:
+  - Representar datos
+  - Procedimientos para interactuar con los mismos (métodos)
+  - Mecanismos para esconder la representación interna
+- Se accede a los atributos con la notación de punto
+- Puede tener atributos privados. Por convención comienzan con _
+
+### Decomposición
+
+- Partir un problema en problemas más pequeños
+- Las clases permiten crear mayores abstracciones en forma de componentes
+- Cada clase se encarga de una parte del programa se vuelve más fácil de mantener
+
+### Abstracción
+
+- Enfocarnos en la información relevante
+- Separar la información central de los secundarios
+- Podemos utilizar variables y métodos (privados o públicos)
