@@ -40,6 +40,7 @@
   - [Clases de Complejidad Algorítmica](#clases-de-complejidad-algorítmica)
   - [Algoritmos de Búsqueda y Ordenación](#algoritmos-de-búsqueda-y-ordenación)
     - [Búsqueda Lineal](#búsqueda-lineal)
+    - [Búsqueda Binaria](#búsqueda-binaria-1)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -554,4 +555,10 @@ Llamada al método setter
 #### Búsqueda Lineal
 
 - Busca en todos los elementos de manera secuencial
+- ¿Cuál es el peor caso?
+
+#### Búsqueda Binaria
+
+- Divide y conquista
+- El problema se divide en 2 en cada iteración
 - ¿Cuál es el peor caso?
