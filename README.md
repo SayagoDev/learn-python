@@ -37,6 +37,7 @@
   - [Introducción a la Complejidad Algorítmica](#introducción-a-la-complejidad-algorítmica)
   - [Aproximaciones](#aproximaciones)
   - [Notación Asintótica](#notación-asintótica)
+  - [Clases de Complejidad Algorítmica](#clases-de-complejidad-algorítmica)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -534,3 +535,14 @@ Llamada al método setter
 - Mejor de los casos, promedio, peor de los casos
 - Big O
 - Nada más importan el término de mayor tamaño
+
+### Clases de Complejidad Algorítmica
+
+- O(1) Constante
+- O(n) Lineal
+- O(log n) Logarítmica
+- O(n log n) log Lineal
+- O(n**2) Polinomial
+- O(2**n) Exponencial
+
+![Complejidad Algorítmica](./images/big-O.jpeg)
