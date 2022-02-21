@@ -25,6 +25,18 @@
   - [Instancias](#instancias)
   - [Decomposición](#decomposición)
   - [Abstracción](#abstracción)
+  - [Decoradores](#decoradores)
+    - [Funciones Como Objetos de Primera-clase](#funciones-como-objetos-de-primera-clase)
+  - [¿Qué son _getters_ y _setters_?](#qué-son-getters-y-setters)
+  - [Función `property()`](#función-property)
+  - [Decorador `@property`](#decorador-property)
+  - [Encapsulación](#encapsulación)
+  - [Herencia](#herencia)
+  - [Polimorfismo](#polimorfismo)
+- [Complejidad Algorítmica](#complejidad-algorítmica)
+  - [Introducción a la Complejidad Algorítmica](#introducción-a-la-complejidad-algorítmica)
+  - [Aproximaciones](#aproximaciones)
+  - [Notación Asintótica](#notación-asintótica)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -308,3 +320,217 @@ class Persona:
 - Enfocarnos en la información relevante
 - Separar la información central de los secundarios
 - Podemos utilizar variables y métodos (privados o públicos)
+
+### Decoradores
+
+#### Funciones Como Objetos de Primera-clase
+
+Otro concepto importante a tener en cuenta es que en Python las funciones son objetos de primera-clase, es decir, que pueden ser pasados y utilizados como argumentos al igual que cualquier otro objeto (strings, enteros, flotantes, listas, etc.).
+
+**Ejemplo:**
+
+```python
+def presentarse(nombre):
+  return f'Me llamo {nombre}'
+
+
+def estudiemos_juntos(nombre):
+  return f'Hey {nombre}, aprendamos Python!'
+
+
+def consume_funciones(funcion_entrante):
+  return funcion_entrante('David')
+
+
+>>> consume_funciones(presentarse)
+'Me llamo David'
+
+>>> consume_funciones(estudiemos_juntos)
+'Hey David, aprendamos Python!'
+```
+
+### ¿Qué son _getters_ y _setters_?
+
+A diferencia de otros lenguajes de programación, en Python los getters y setters tienen el objetivo de asegurar el encapsulamiento de datos. Cómo habrás visto, si declaramos una variable privada en Python al colocar un guión bajo al inicio de esta (_) y normalmente son utilizados para: añadir lógica de validación al momento de obtener y definir un valor y, para evitar el acceso directo al campo de una clase.
+
+**Clases sin _getters_ y _setters_:**
+Veamos un ejemplo con una clase que almacena un datos de distancia recorrida en millas (mi) y lo convierte a kilómetros (km)
+
+```python
+class Millas:
+
+    def __init__(self, distancia=0):
+        self.distancia = distancia
+
+    def convertir_a_kilometros(self):
+        return (self.distancia * 1.609344)
+
+
+# Creamos un nuevo objeto
+avion = Millas()
+
+# Indicamos la distancia
+avion.distancia = 200
+
+# Obtenemos el atributo distancia
+>>> print(avion.distancia)
+200
+
+# Obtenemos el método convertir_a_kilometros
+>>> print(avion.convertir_a_kilometros)
+321.8688
+```
+
+**Utilizando _getters_ y _setters_:**
+Incluyamos un par de métodos para obtener la distancia y otro para que no acepte valores inferiores a cero, pues no tendría sentido que un vehículo recorra una distancia negativa. Estos son métodos getters y setters.
+
+```python
+class Millas:
+
+    def __init__(self, distancia=0):
+        self.distancia = distancia
+
+    def convertir_a_kilometros(self):
+        return (self.distancia * 1.609344)
+
+    # Método getter
+    def obtener_distancia(self):
+        return self._distancia
+
+    # Método setter
+    def definir_distancia(self, valor):
+        if valor < 0:
+            raise ValueError('No es possible convertir distancias menores a 0.')
+        self._distancia = valor
+```
+
+El método getter obtendrá el valor de la distancia que y el método setter se encargará de añadir una restricción. También debemos notar cómo distancia fue reemplazado por _distancia, denotando que es una variable privada.
+
+### Función `property()`
+
+Esta función está incluida en Python, en particular crea y retorna la propiedad de un objeto. La propiedad de un objeto posee los métodos `getter()`, `setter()` y `del()`.
+
+En tanto la función tiene cuatro atributos: `property(fget, fset, fdel, fdoc):`
+
+- fget: trae el valor de un atributo.
+- fset: define el valor de un atributo.
+- fdel: elimina el valor de un atributo.
+- fdoc: crea un docstring por atributo.
+
+**Implementación usando `property()`:**
+
+```python
+class Millas:
+
+    def __init__(self):
+        self.distancia = 0
+
+    # Función para obtener el valor de _distancia
+    def obtener_distancia(self):
+        print('Llamada al método getter')
+        return self._distancia
+
+    # Función para definir el valor de _distancia
+    def definir_distancia(self, recorrido):
+        print('Llamada al método setter')
+        self._distancia = recorrido
+
+    # Función para eliminar el atributo _distancia
+    def eliminar_distancia(self):
+        del self._distancia
+
+    distancia = property(obtener_distancia, definir_distancia, eliminar_distancia)
+
+
+# Creamos un nuevo objeto
+avion = Millas()
+
+# Indicamos la distancia
+avion.distancia = 200
+
+# Obtenemos su atributo distancia
+>>> print(avion.distancia)
+Llamada al método getter
+Llamada al método setter
+200
+```
+
+### Decorador `@property`
+
+Este decorador es uno de varios con los que ya cuenta Python, el cual nos permite utilizar getters y setters para hacer más fácil la implementación de la programación orientada a objetos en Python cambiando los métodos o atributos de las clases de forma que no modifiquemos el código.
+
+**Ejemplo:**
+
+```python
+class Millas:
+
+    def __init__(self):
+        self.distancia = 0
+
+    # Función para obtener el valor de _distancia
+    # Usando el decorador property
+    @property
+    def obtener_distancia(self):
+        print('Llamada al método getter')
+        return self._distancia
+
+    # Función para definir el valor de _distancia
+    @obtener_distancia.setter
+    def definir_distancia(self, valor):
+        if valor < 0:
+            raise ValueError('No es possible convertir distancias menores a 0.')
+        print('Llamada al método setter')
+        self._distancia = valor
+
+
+# Creamos un nuevo objeto
+avion = Millas()
+
+# Indicamos la distancia
+avion.distancia = 200
+
+# Obtenemos su atributo distancia
+>>> print(avion.definir_distancia)
+Llamada al método getter
+Llamada al método setter
+200
+```
+
+### Encapsulación
+
+- Permite agrupar datos y su comportamiento
+- Controla el acceso a dichos datos
+- Previene modificaciones no autorizadas
+
+### Herencia
+
+- Permite modelar una jerarquía de clases
+- Permite compartir comportamiento común en la jerarquía
+- Al padre se le conoce como superclase y al hijo como subclase
+
+### Polimorfismo
+
+- La habilidad de tomar varias formas
+- En Python, nos permite cambiar el comportamiento de una superclase para adaptarlo a la subclase
+
+## Complejidad Algorítmica
+
+### Introducción a la Complejidad Algorítmica
+
+- ¿Por qué comparamos la eficiencia de un algoritmo?
+- Complejidad temporal vs complejidad espacial
+- Podemos definirla como T(n)
+
+### Aproximaciones
+
+- Cronometrar el tiempo en el que corre un algoritmo 🤨
+- Contar los pasos con una medida abstracta de operación 🙂
+- Contar los pasos conforme nos aproximamos al infinito 😃
+
+### Notación Asintótica
+
+- No importan variaciones pequeñas
+- El enfoque se centra en lo que pasa conforme el tamaño del problem se acerca al infinito
+- Mejor de los casos, promedio, peor de los casos
+- Big O
+- Nada más importan el término de mayor tamaño
