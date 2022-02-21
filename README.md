@@ -38,6 +38,8 @@
   - [Aproximaciones](#aproximaciones)
   - [Notación Asintótica](#notación-asintótica)
   - [Clases de Complejidad Algorítmica](#clases-de-complejidad-algorítmica)
+  - [Algoritmos de Búsqueda y Ordenación](#algoritmos-de-búsqueda-y-ordenación)
+    - [Búsqueda Lineal](#búsqueda-lineal)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -546,3 +548,10 @@ Llamada al método setter
 - O(2**n) Exponencial
 
 ![Complejidad Algorítmica](./images/big-O.jpeg)
+
+### Algoritmos de Búsqueda y Ordenación
+
+#### Búsqueda Lineal
+
+- Busca en todos los elementos de manera secuencial
+- ¿Cuál es el peor caso?
