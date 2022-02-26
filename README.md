@@ -38,9 +38,10 @@
   - [Aproximaciones](#aproximaciones)
   - [Notación Asintótica](#notación-asintótica)
   - [Clases de Complejidad Algorítmica](#clases-de-complejidad-algorítmica)
-  - [Algoritmos de Búsqueda y Ordenación](#algoritmos-de-búsqueda-y-ordenación)
-    - [Búsqueda Lineal](#búsqueda-lineal)
-    - [Búsqueda Binaria](#búsqueda-binaria-1)
+- [Algoritmos de Búsqueda y Ordenación](#algoritmos-de-búsqueda-y-ordenación)
+  - [Búsqueda Lineal](#búsqueda-lineal)
+  - [Búsqueda Binaria](#búsqueda-binaria-1)
+  - [Ordenamiento de Burbuja](#ordenamiento-de-burbuja)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -550,15 +551,21 @@ Llamada al método setter
 
 ![Complejidad Algorítmica](./images/big-O.jpeg)
 
-### Algoritmos de Búsqueda y Ordenación
+## Algoritmos de Búsqueda y Ordenación
 
-#### Búsqueda Lineal
+### Búsqueda Lineal
 
 - Busca en todos los elementos de manera secuencial
 - ¿Cuál es el peor caso?
 
-#### Búsqueda Binaria
+### Búsqueda Binaria
 
 - Divide y conquista
 - El problema se divide en 2 en cada iteración
 - ¿Cuál es el peor caso?
+
+### Ordenamiento de Burbuja
+
+Es un algoritmo que recorre repetidamente una lista que necesita ordenarse. Compara elementos adyacentes y los intercambia si están en el orden incorrecto. Este procedimiento se repite hasta que no se requiere mas intercambios, lo que indica que la lista se encuentra ordenada.
+
+![Ordenamiento de Burbuja](./images/Bubble-sort.gif)
