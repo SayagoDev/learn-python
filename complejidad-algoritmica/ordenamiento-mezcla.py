@@ -1,6 +1,6 @@
 import random
 
-# O(long n) * O(n) = O(n long n)
+# O(log n) * O(n) = O(n log n)
 def ordenamiento_por_mezcla(lista):
     if len(lista) > 1:
         medio = len(lista) // 2
@@ -9,7 +9,7 @@ def ordenamiento_por_mezcla(lista):
         print(izquierda, '*' * 5, derecha)
 
         # Llamada recursiva en cada mitad
-        # O(long n)
+        # O(log n)
         ordenamiento_por_mezcla(izquierda)
         ordenamiento_por_mezcla(derecha)
 
