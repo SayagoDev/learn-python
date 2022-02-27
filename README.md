@@ -43,6 +43,7 @@
   - [Búsqueda Binaria](#búsqueda-binaria-1)
   - [Ordenamiento de Burbuja](#ordenamiento-de-burbuja)
   - [Ordenamiento por Inserción](#ordenamiento-por-inserción)
+  - [Ordenamiento por Mezcla](#ordenamiento-por-mezcla)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -577,3 +578,10 @@ En este algoritmo se ordena "en su lugar", es decir que no se crea un a nueva li
 modifican los valores en memoria.
 
 ![Ordenamiento Por Inserción](./images/Insertion-sort.gif)
+
+### Ordenamiento por Mezcla
+
+El ordenamiento por mezcla es un algoritmo de divide y conquista. Primero divide una lista en partes iguales hasta que quedan sublistas de
+1 o 0 elementos. Luego las recombina en forma ordenada.
+
+![Ordenamiento Por Mezcla](./images/Merge-sort.gif)
