@@ -1,5 +1,6 @@
 import random
 
+# O(n**2)
 def ordenamiento_por_insercion(lista):
     for indice in range(1, len(lista)):
         valor_actual = lista[indice]
