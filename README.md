@@ -42,6 +42,7 @@
   - [Búsqueda Lineal](#búsqueda-lineal)
   - [Búsqueda Binaria](#búsqueda-binaria-1)
   - [Ordenamiento de Burbuja](#ordenamiento-de-burbuja)
+  - [Ordenamiento por Inserción](#ordenamiento-por-inserción)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -569,3 +570,10 @@ Llamada al método setter
 Es un algoritmo que recorre repetidamente una lista que necesita ordenarse. Compara elementos adyacentes y los intercambia si están en el orden incorrecto. Este procedimiento se repite hasta que no se requiere mas intercambios, lo que indica que la lista se encuentra ordenada.
 
 ![Ordenamiento de Burbuja](./images/Bubble-sort.gif)
+
+### Ordenamiento por Inserción
+
+En este algoritmo se ordena "en su lugar", es decir que no se crea un a nueva lista con los elementos ordenados si no que en lugar de eso se
+modifican los valores en memoria.
+
+![Ordenamiento Por Inserción](./images/Insertion-sort.gif)
