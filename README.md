@@ -48,6 +48,8 @@
   - [Pip](#pip)
 - [¿Por qué graficar?](#por-qué-graficar)
   - [Graficado Simple](#graficado-simple)
+- [Introducción a la Optimización](#introducción-a-la-optimización)
+  - [El problema del Morral](#el-problema-del-morral)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -626,3 +628,13 @@ deactivate
 - Bokeh permite construir gráficas complejas de manera rápida y con comando simples
 - Permite exportar a varios formatos como html, notebooks, imágenes, etc
 - Bokeh se puede utilizar en el servidor con Flask y Django
+
+## Introducción a la Optimización
+
+- El concepto de optimización permite resolver muchos problemas de manera computacional
+- Una función objetivo que debemos maximizar o minimizar
+- Una serie de limitantes que debemos respetar
+
+### El problema del Morral
+
+![Problema del Morral](./images/morral.jpg)
