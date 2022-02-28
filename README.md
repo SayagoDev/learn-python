@@ -660,6 +660,8 @@ deactivate
 
 La serie de _Fibonacci_ se representa como:
 
-$$F_{n}=F_{n-1}+F_{n-2}$$
+```math
+F_{n}=F_{n-1}+F_{n-2}
+```
 
 ![Números de Fibonacci](./images/fibonacci.png)
