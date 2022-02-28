@@ -50,6 +50,10 @@
   - [Graficado Simple](#graficado-simple)
 - [Introducción a la Optimización](#introducción-a-la-optimización)
   - [El problema del Morral](#el-problema-del-morral)
+- [Estadística Computacional con Python](#estadística-computacional-con-python)
+  - [Programación Dinámica](#programación-dinámica)
+    - [Memoization](#memoization)
+    - [Números de Fibonacci](#números-de-fibonacci)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -638,3 +642,24 @@ deactivate
 ### El problema del Morral
 
 ![Problema del Morral](./images/morral.jpg)
+
+## Estadística Computacional con Python
+
+### Programación Dinámica
+
+- **Subestructura Óptima.** Una solución global óptima se puede encontrar al combinar soluciones óptimas de subproblemas locales
+- **Problemas empalmados.** Una solución óptima que involucra resolver el mismo problema en varias ocasiones
+
+#### Memoization
+
+- La _Memorización_ es una técnica para guardar cómputos previos y evitar realizarlos nuevamente
+- Normalmente se utiliza un diccionario, donde las consultas se pueden hacer en O(1)
+- Intercambia tiempo por espacio
+
+#### Números de Fibonacci
+
+La serie de _Fibonacci_ se representa como:
+
+$$F_{n}=F_{n-1}+F_{n-2}$$
+
+![Números de Fibonacci](./images/fibonacci.png)
