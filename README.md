@@ -44,6 +44,10 @@
   - [Ordenamiento de Burbuja](#ordenamiento-de-burbuja)
   - [Ordenamiento por Inserción](#ordenamiento-por-inserción)
   - [Ordenamiento por Mezcla](#ordenamiento-por-mezcla)
+- [Ambientes Virtuales](#ambientes-virtuales)
+  - [Pip](#pip)
+- [¿Por qué graficar?](#por-qué-graficar)
+  - [Graficado Simple](#graficado-simple)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -585,3 +589,40 @@ El ordenamiento por mezcla es un algoritmo de divide y conquista. Primero divide
 1 o 0 elementos. Luego las recombina en forma ordenada.
 
 ![Ordenamiento Por Mezcla](./images/Merge-sort.gif)
+
+## Ambientes Virtuales
+
+- Permiten aislar el ambiente para poder instalar diversas versiones de paquetes
+- A partir de Python 3 se incluye en la librería estándar en el módulo venv
+- Ningún ingeniero profesional de Python trabaja sin ellos
+
+**Ejemplo:**
+
+```bash
+# Para generar nuestro ambiente virtual escribimos en terminal
+python -m venv env
+
+# Activamos nuestro ambiente virtual
+source env/bin/activate
+
+# Para salir de nuestro ambiente virtual
+deactivate
+```
+
+### Pip
+
+- Permite descargar paquetes de terceros para utilizar en nuestro programa
+- Permite compartir nuestros paquetes con terceros
+- Permite especificar la versión del paquete que necesitamos
+
+## ¿Por qué graficar?
+
+- Reconocimiento de patrones
+- Predicción de una serie
+- Simplifica la interpretación y las conclusiones acerca de los datos
+
+### Graficado Simple
+
+- Bokeh permite construir gráficas complejas de manera rápida y con comando simples
+- Permite exportar a varios formatos como html, notebooks, imágenes, etc
+- Bokeh se puede utilizar en el servidor con Flask y Django
