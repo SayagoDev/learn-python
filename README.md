@@ -54,6 +54,8 @@
   - [Programación Dinámica](#programación-dinámica)
     - [Memoization](#memoization)
     - [Números de Fibonacci](#números-de-fibonacci)
+  - [Caminos Aleatorios](#caminos-aleatorios)
+    - [Camino de Borrachos](#camino-de-borrachos)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -658,6 +660,8 @@ deactivate
 
 #### Números de Fibonacci
 
+NOTA: Para poder ver las formulas matemáticas es necesario instalar la siguiente extensión: [xhub](https://chrome.google.com/webstore/detail/xhub/anidddebgkllnnnnjfkmjcaallemhjee/related)
+
 La serie de _Fibonacci_ se representa como:
 
 ```math
@@ -665,3 +669,12 @@ F_{n}=F_{n-1}+F_{n-2}
 ```
 
 ![Números de Fibonacci](./images/fibonacci.png)
+
+### Caminos Aleatorios
+
+- Es un tipo de simulación que elige aleatoriamente una decisión dentro de un conjunto de decisiones válidas
+- Se utiliza en muchos campos del conocimiento cuando los sistemas no son deterministas e incluyen elementos de aleatoriedad
+
+#### Camino de Borrachos
+
+![Camino de Borracho](./images/borracho.gif)
