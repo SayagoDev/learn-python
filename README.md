@@ -678,3 +678,21 @@ F_{n}=F_{n-1}+F_{n-2}
 #### Camino de Borrachos
 
 ![Camino de Borracho](./images/borracho.gif)
+
+### Programación Estocástica
+
+- Un programa es determinístico si cuando se corre con el mismo _input_ produce el mismo _output_
+- Los programas determinísticos son muy importantes, pero existen problemas que no pueden resolverse de esa manera
+- La programación estocástica permite introducir aleatoriedad a nuestros programas para crear simulaciones que permiten resolver otro tipo de problemas
+- Los programas estocásticos se aprovechan de que las distribuciones probabilísticas de un problema se conocen o puede ser estimadas
+
+### Cálculo de Probabilidades
+
+- La probabilidad es una mediad e la certidumbre asociada a un evento o suceso futuro y suele expresarse como un número entre 0 y 1
+- Una probabilidad de 0 significa que un suceso jamás sucederá
+- Una probabilidad de 1 significa que un suceso está garantizado de suceder en el futuro
+----
+- **Ley del complemento:** $`P(A) + P(~A) = 1`$
+- **Ley multiplicativa:** $`P(A y B) = P(A) * P(B)`$
+- **Ley aditiva (mutuamente exclusivos):** $`P(A o B) = P(A) + P(B)`$
+- **Ley aditiva (no exlusivos):** $`P(A o B) = P(A) + P(B) - P(A y B)`$
