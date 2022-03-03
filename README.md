@@ -716,4 +716,4 @@ $$`P(\lim\limits_{n \to\infty} \overline{X}_n = \mu) = 1`$$
 #### Falacia del Apostador
 
 - La falacia del apostador señala que después de un evento extremo, ocurrirán eventos menos extremos para nivelar la media
-- La _regresion a la media_ señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo
+- La _regresión a la media_ señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo
