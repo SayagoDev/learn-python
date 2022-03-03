@@ -56,6 +56,11 @@
     - [Números de Fibonacci](#números-de-fibonacci)
   - [Caminos Aleatorios](#caminos-aleatorios)
     - [Camino de Borrachos](#camino-de-borrachos)
+  - [Programación Estocástica](#programación-estocástica)
+  - [Cálculo de Probabilidades](#cálculo-de-probabilidades)
+  - [Inferencia Estadística](#inferencia-estadística)
+    - [Ley de los Grandes Números](#ley-de-los-grandes-números)
+    - [Falacia del Apostador](#falacia-del-apostador)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -691,11 +696,13 @@ F_{n}=F_{n-1}+F_{n-2}
 - La probabilidad es una mediad e la certidumbre asociada a un evento o suceso futuro y suele expresarse como un número entre 0 y 1
 - Una probabilidad de 0 significa que un suceso jamás sucederá
 - Una probabilidad de 1 significa que un suceso está garantizado de suceder en el futuro
+
 ----
+
 - **Ley del complemento:** $`P(A) + P(~A) = 1`$
 - **Ley multiplicativa:** $`P(A y B) = P(A) * P(B)`$
 - **Ley aditiva (mutuamente exclusivos):** $`P(A o B) = P(A) + P(B)`$
-- **Ley aditiva (no exlusivos):** $`P(A o B) = P(A) + P(B) - P(A y B)`$
+- **Ley aditiva (no exclusivos):** $`P(A o B) = P(A) + P(B) - P(A y B)`$
 
 ### Inferencia Estadística
 
@@ -711,7 +718,9 @@ mismas propiedades que la población de la cual fue extraída"_ - John Guttag
 En pruebas independientes repetidas con la misma probabilidad $`P`$ de un resultado, la fracción de desviaciones de $`P`$
 converge a cero conforme las cantidades de pruebas se acercan al infinito.
 
-$$`P(\lim\limits_{n \to\infty} \overline{X}_n = \mu) = 1`$$
+```math
+P(\lim\limits_{n \to\infty} \overline{X}_n = \mu) = 1
+```
 
 #### Falacia del Apostador
 
