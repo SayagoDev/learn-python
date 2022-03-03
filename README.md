@@ -696,3 +696,24 @@ F_{n}=F_{n-1}+F_{n-2}
 - **Ley multiplicativa:** $`P(A y B) = P(A) * P(B)`$
 - **Ley aditiva (mutuamente exclusivos):** $`P(A o B) = P(A) + P(B)`$
 - **Ley aditiva (no exlusivos):** $`P(A o B) = P(A) + P(B) - P(A y B)`$
+
+### Inferencia Estadística
+
+- Con las simulaciones podemos calcular las probabilidades de eventos complejos sabiendo las probabilidades de eventos simples
+- ¿Qué pasa cuando no sabemos las probabilidades de los eventos simples?
+  - Las técnicas de la Inferencia Estadística nos permiten inferir/concluir las propiedades de una población a partir de una muestra **aleatoria**.
+
+_"El principio guía de la Inferencia Estadística es que una muestra aleatoria tiende a exhibir las
+mismas propiedades que la población de la cual fue extraída"_ - John Guttag
+
+#### Ley de los Grandes Números
+
+En pruebas independientes repetidas con la misma probabilidad $`P`$ de un resultado, la fracción de desviaciones de $`P`$
+converge a cero conforme las cantidades de pruebas se acercan al infinito.
+
+$$`P(\lim\limits_{n \to\infty} \overline{X}_n = \mu) = 1`$$
+
+#### Falacia del Apostador
+
+- La falacia del apostador señala que después de un evento extremo, ocurrirán eventos menos extremos para nivelar la media
+- La _regresion a la media_ señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo
