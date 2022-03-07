@@ -64,6 +64,8 @@
     - [Media](#media)
     - [Varianza](#varianza)
     - [Desviación Estándar](#desviación-estándar)
+    - [Distribución Normal](#distribución-normal)
+    - [Regla Empírica](#regla-empírica)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -758,4 +760,26 @@ Var(X) = \frac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i - \mu)^2
 
 ```math
 \sigma = \sqrt{\displaystyle\sum_{i=1}^{N}p_i(x_i - \mu)^2}
+```
+
+#### Distribución Normal
+
+- Es una de las distribuciones más recurrentes en cualquier ámbito
+- Se define completamente por su media y su desviación estándar
+- Permite calcular intervalos de confianza con la regla empírica
+
+```math
+f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+```
+
+#### Regla Empírica
+
+- También conocida como la regla 68-95-99.7
+- Señala cuál es la dispersión de los datos en una distribución normal a uno, dos y tres sigmas
+- Permite calcular probabilidades con la densidad de la distribución normal
+
+```math
+Pr(\mu - 1\sigma \leq X \leq \mu + 1\sigma) \approx 0.6827 \\
+Pr(\mu - 2\sigma \leq X \leq \mu + 2\sigma) \approx 0.9545 \\
+Pr(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 0.9973
 ```
