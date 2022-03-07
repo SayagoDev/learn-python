@@ -62,6 +62,8 @@
     - [Ley de los Grandes Números](#ley-de-los-grandes-números)
     - [Falacia del Apostador](#falacia-del-apostador)
     - [Media](#media)
+    - [Varianza](#varianza)
+    - [Desviación Estándar](#desviación-estándar)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -736,4 +738,24 @@ P(\lim\limits_{n \to\infty} \overline{X}_n = \mu) = 1
 
 ```math
 \overline{x} = \frac{1}{n}\displaystyle\sum_{i=1}^{n}x_i = \frac{x_1 + x_2 + \cdots + x_n}{n}
+```
+
+#### Varianza
+
+- La varianza mide qué tan propagados se encuentran un conjunto de valores aleatorios de su media
+- Mientras que la media nos da una idea de dónde se encuentran los valores, la varianza nos dice que tan dispersos se encuentran
+- La varianza siempre debe entenderse con respecto a la media
+
+```math
+Var(X) = \frac{1}{n}\displaystyle\sum_{i=1}^{n}(x_i - \mu)^2
+```
+
+#### Desviación Estándar
+
+- La desviación estándar es la raíz cuadrada de la varianza
+- Nos permite entender, también, la propagación y se debe entender siempre relacionado a la media
+- La ventaja sobre la varianza es que la desviación estándar está en las mismas unidades que la media
+
+```math
+\sigma = \sqrt{\displaystyle\sum_{i=1}^{N}p_i(x_i - \mu)^2}
 ```
