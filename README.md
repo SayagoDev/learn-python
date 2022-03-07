@@ -66,6 +66,7 @@
     - [Desviación Estándar](#desviación-estándar)
     - [Distribución Normal](#distribución-normal)
     - [Regla Empírica](#regla-empírica)
+  - [Simulaciones de Montecarlo](#simulaciones-de-montecarlo)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -783,3 +784,9 @@ Pr(\mu - 1\sigma \leq X \leq \mu + 1\sigma) \approx 0.6827 \\
 Pr(\mu - 2\sigma \leq X \leq \mu + 2\sigma) \approx 0.9545 \\
 Pr(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 0.9973
 ```
+
+### Simulaciones de Montecarlo
+
+- Permite crear simulaciones para predecir el resultado de un problema
+- Permite convertir problemas determinísticos en problemas estocásticos
+- Es utilizado en una gran diversidad de áreas, desde la ingeniería hasta la biología y el derecho
