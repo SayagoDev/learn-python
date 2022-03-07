@@ -61,6 +61,7 @@
   - [Inferencia Estadística](#inferencia-estadística)
     - [Ley de los Grandes Números](#ley-de-los-grandes-números)
     - [Falacia del Apostador](#falacia-del-apostador)
+    - [Media](#media)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -726,3 +727,13 @@ P(\lim\limits_{n \to\infty} \overline{X}_n = \mu) = 1
 
 - La falacia del apostador señala que después de un evento extremo, ocurrirán eventos menos extremos para nivelar la media
 - La _regresión a la media_ señala que después de un evento aleatorio extremo, el siguiente evento probablemente será menos extremo
+
+#### Media
+
+- Es una medida de tendencia central
+- Comúnmente es conocida como el promedio
+- La media de una población se denota con el símbolo $`\mu`$. La media de una muestra se denota con $`\overline{X}`$
+
+```math
+\overline{x} = \frac{1}{n}\displaystyle\sum_{i=1}^{n}x_i = \frac{x_1 + x_2 + \cdots + x_n}{n}
+```
