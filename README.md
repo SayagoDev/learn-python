@@ -67,6 +67,8 @@
     - [Distribución Normal](#distribución-normal)
     - [Regla Empírica](#regla-empírica)
   - [Simulaciones de Montecarlo](#simulaciones-de-montecarlo)
+  - [Muestreo](#muestreo)
+  - [Teorema del Límite Central](#teorema-del-límite-central)
 
 ## Introducción al Pensamiento Computacional en Python
 
@@ -790,3 +792,23 @@ Pr(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 0.9973
 - Permite crear simulaciones para predecir el resultado de un problema
 - Permite convertir problemas determinísticos en problemas estocásticos
 - Es utilizado en una gran diversidad de áreas, desde la ingeniería hasta la biología y el derecho
+
+### Muestreo
+
+- Hay ocasiones en la que no tenemos acceso a toda la población que queremos explorar
+- Uno de los grandes descubrimientos de la estadística es que las muestras aleatorias tienden a mostrar las mismas propiedades de la población objetivo
+- El tipo de muestreo que hemos hecho hasta ahora es muestreo probabilístico
+
+---
+
+- En un muestreo aleatorio cualquier miembro de la población tiene la misma probabilidad de ser escogido
+- En un muestreo estratificado tomamos en consideración las características de la población para partirla en subgrupos y luego tomamos muestras de cada subgrupo
+  - Incrementa la probabilidad de qu el muestreo sea representativo de la población
+
+### Teorema del Límite Central
+
+- Es uno de los teoremas más importantes de la estadística
+- Establece que muestras aleatorias de cualquier distribución van a tener una distribución normal
+- Permite entender cualquier distribución como la distribución normal de sus medias y eso nos permite aplicar todo lo que sabemos de distribuciones normales
+- Mientras más muestras obtengamos, mayor será la similitud con la distribución normal
+- Mientras la muestra sea de mayor tamaño, la desviación estándar será menor
