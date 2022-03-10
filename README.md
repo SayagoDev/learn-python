@@ -2,16 +2,18 @@
 
 ## Tabla de contenido: <!-- omit in toc -->
 
-- [El Zen de Python](#el-zen-de-python)
+- [Curso Python Intermedio](#curso-python-intermedio)
+  - [El Zen de Python](#el-zen-de-python)
 - [Introducción al Pensamiento Computacional en Python](#introducción-al-pensamiento-computacional-en-python)
   - [Aproximación de Soluciones](#aproximación-de-soluciones)
   - [Búsqueda Binaria](#búsqueda-binaria)
   - [Recursividad](#recursividad)
   - [Argumentos de otras funciones](#argumentos-de-otras-funciones)
-  - [Funciones en Expresiones](#funciones-en-expresiones)
+  - [Funciones en Expresiones/Función Anónima](#funciones-en-expresionesfunción-anónima)
   - [Funciones en Estructuras de Datos](#funciones-en-estructuras-de-datos)
   - [Clonación](#clonación)
   - [List Comprehension](#list-comprehension)
+  - [Dictionary Comprehension](#dictionary-comprehension)
   - [Pruebas de Caja Negra](#pruebas-de-caja-negra)
   - [Pruebas de Caja de Cristal](#pruebas-de-caja-de-cristal)
   - [Debugging](#debugging)
@@ -71,7 +73,9 @@
   - [Muestreo](#muestreo)
   - [Teorema del Límite Central](#teorema-del-límite-central)
 
-## El Zen de Python
+## Curso Python Intermedio
+
+### El Zen de Python
 
 El Zen de Python se compone por los principios para escribir tu código de manera clara, sencilla y precisa. Estos son:
 
@@ -161,7 +165,7 @@ def aplicar_operacion(f, numeros):
 [2, 4, 6]
 ```
 
-### Funciones en Expresiones
+### Funciones en Expresiones/Función Anónima
 
 Una forma de definir una función en una expresión es utilizando el keyword `lambda`. lambda tiene la siguiente sintaxis: `lambda <vars>: <expresion>`.
 
@@ -172,6 +176,11 @@ sumar = lambda x, y: x + y
 
 >>> sumar(2, 3)
 5
+
+palindrome = lambda string: string == string[::-1]
+
+>>> print(palindrome('ana'))
+True
 ```
 
 ### Funciones en Estructuras de Datos
@@ -201,6 +210,18 @@ def aplicar_operaciones(num):
 
 - Es una forma concisa de aplicar operaciones a los valores de una secuencia
 - También se pueden aplicar condiciones para filtrar
+
+```python
+[element for element in iterable if condition]
+[i**2 for i in range(1, 101) if i % 3 != 0]
+```
+
+### Dictionary Comprehension
+
+```python
+{key:value for value in iterable if condition}
+{i: i**3 for i range(1, 101) if i % 3 != 0}
+```
 
 ### Pruebas de Caja Negra
 
@@ -658,10 +679,10 @@ El ordenamiento por mezcla es un algoritmo de divide y conquista. Primero divide
 
 ```bash
 # Para generar nuestro ambiente virtual escribimos en terminal
-python -m venv env
+python -m venv venv
 
 # Activamos nuestro ambiente virtual
-source env/bin/activate
+source venv/bin/activate
 
 # Para salir de nuestro ambiente virtual
 deactivate
