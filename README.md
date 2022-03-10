@@ -803,7 +803,7 @@ Pr(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 0.9973
 
 - En un muestreo aleatorio cualquier miembro de la población tiene la misma probabilidad de ser escogido
 - En un muestreo estratificado tomamos en consideración las características de la población para partirla en subgrupos y luego tomamos muestras de cada subgrupo
-  - Incrementa la probabilidad de qu el muestreo sea representativo de la población
+  - Incrementa la probabilidad de que el muestreo sea representativo de la población
 
 ### Teorema del Límite Central
 
