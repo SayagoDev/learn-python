@@ -165,6 +165,77 @@ def aplicar_operacion(f, numeros):
 [2, 4, 6]
 ```
 
+**Sin usar Filter:**
+
+```python
+my_list = [1, 4, 5, 6, 9, 13, 19, 21]
+
+odd = [i for i in my_list if i % 2 != 0]
+
+>>>print(odd)
+[1, 5, 9, 13, 19, 21]
+```
+
+**Usando Filter:**
+
+```python
+my_list = [1, 4, 5, 6, 9, 13, 19, 21]
+
+odd = list(filter(lambda x: x%2 != 0, my_list))
+
+>>>print(odd)
+[1, 5, 9, 13, 19, 21]
+```
+
+**Sin usar Map:**
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+squares = [i**2 for i in my_list]
+
+>>>print(squares)
+[1, 4, 9, 16, 25]
+```
+
+**Usando Map:**
+
+```python
+my_list = [1, 2, 3, 4, 5]
+
+squares = list(map(lambda x: x**2, my_list))
+
+>>>print(squares)
+[1, 4, 9, 16, 25]
+```
+
+**Sin usar Reduce:**
+
+```python
+my_list = [2, 2, 2, 2, 2]
+
+all_multiplied = 1
+
+for i in my_list:
+  all_multiplied *= i
+
+>>>print(all_multiplied)
+32
+```
+
+**Usando Reduce:**
+
+```python
+from functools import reduce
+
+my_list = [2, 2, 2, 2, 2]
+
+all_multiplied = reduce(lambda a, b: a * b, my_list)
+
+>>>print(all_multiplied)
+32
+```
+
 ### Funciones en Expresiones/Función Anónima
 
 Una forma de definir una función en una expresión es utilizando el keyword `lambda`. lambda tiene la siguiente sintaxis: `lambda <vars>: <expresion>`.
