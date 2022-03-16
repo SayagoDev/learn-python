@@ -4,6 +4,9 @@
 
 - [Curso Python Intermedio](#curso-python-intermedio)
   - [El Zen de Python](#el-zen-de-python)
+  - [Funciones Anónimas](#funciones-anónimas)
+  - [Los Errores en el Código](#los-errores-en-el-código)
+    - [Debugging](#debugging)
 - [Introducción al Pensamiento Computacional en Python](#introducción-al-pensamiento-computacional-en-python)
   - [Aproximación de Soluciones](#aproximación-de-soluciones)
   - [Búsqueda Binaria](#búsqueda-binaria)
@@ -16,7 +19,7 @@
   - [Dictionary Comprehension](#dictionary-comprehension)
   - [Pruebas de Caja Negra](#pruebas-de-caja-negra)
   - [Pruebas de Caja de Cristal](#pruebas-de-caja-de-cristal)
-  - [Debugging](#debugging)
+  - [Debugging](#debugging-1)
     - [Reglas Generales](#reglas-generales)
     - [Diseño de Experimentos](#diseño-de-experimentos)
     - [Errores Comunes](#errores-comunes)
@@ -111,59 +114,7 @@ Si por hacer las cosas ya y tenemos poco tiempo, si es mejor dejarlo para despu�
 - Los espacios de nombres son una gran idea, ¡Tengamos más de esos! (namespaces):
 Es el nombre que se ha indicado luego de la palabra import, es decir la ruta (namespace) del módulo. (Lo veremos a profundidad más adelante).
 
-## Introducción al Pensamiento Computacional en Python
-
-```python
-# <literales> = 1, 'abc', 2.0 True
-# <operadores> = + / * % ** = ==
-# <literal> <operador> <literal>
-
-# <objeto> <operador> <objeto> # expresión
-# >>> valor
-
->>> 1 + 2
->>> 1 3.0 # error sintáctico
->>> 5 / 'Platzi' # error semántico estático
->>> 5 * 'Platzi'
-
-# statement o enunciado
->>> print('hello, Platzi!')
-```
-
-### Aproximación de Soluciones
-
-- Similar a enumeración exhaustiva, pero no necesita una respuesta exacta
-- Podemos aproximar soluciones con un margen de error que llamaremos epsilon
-
-### Búsqueda Binaria
-
-- Cuando la respuesta se encuentra en un conjunto ordenado, podemos utilizar búsqueda binaria
-- Es altamente eficiente, pues corta el espacio de búsqueda en dos por cada iteración
-
-### Recursividad
-
-- Algorítmica: Una forma de crear soluciones utilizando el principio de "divide y vencerás"
-- Programática: Una técnica programática mediante la cual una función se llama a sí misma
-
-### Argumentos de otras funciones
-
-Las funciones también pueden recibir funciones como argumentos para crear abstracciones más poderosas.
-
-```python
-def multiplicar_por_dos(n):
-    return n * 2
-
-
-def aplicar_operacion(f, numeros):
-    resultados = []
-    for numero in numeros:
-        resultado = f(numero)
-        resultado.append(resultado)
-
->>> nums = [1, 2, 3]
->>> aplicar_operaciones(multiplicar_por_dos, nums)
-[2, 4, 6]
-```
+### Funciones Anónimas
 
 **Sin usar Filter:**
 
@@ -234,6 +185,83 @@ all_multiplied = reduce(lambda a, b: a * b, my_list)
 
 >>>print(all_multiplied)
 32
+```
+
+### Los Errores en el Código
+
+- Errores
+  - SyntaxError
+  - Exception
+    - KeyboardInterrupt
+    - KeyError
+    - IndexError
+    - FileNotFoundError
+    - ZeroDivisionError
+    - ImportError
+    - +50
+
+**Ejemplo:**
+
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+```
+
+#### Debugging
+
+## Introducción al Pensamiento Computacional en Python
+
+```python
+# <literales> = 1, 'abc', 2.0 True
+# <operadores> = + / * % ** = ==
+# <literal> <operador> <literal>
+
+# <objeto> <operador> <objeto> # expresión
+# >>> valor
+
+>>> 1 + 2
+>>> 1 3.0 # error sintáctico
+>>> 5 / 'Platzi' # error semántico estático
+>>> 5 * 'Platzi'
+
+# statement o enunciado
+>>> print('hello, Platzi!')
+```
+
+### Aproximación de Soluciones
+
+- Similar a enumeración exhaustiva, pero no necesita una respuesta exacta
+- Podemos aproximar soluciones con un margen de error que llamaremos epsilon
+
+### Búsqueda Binaria
+
+- Cuando la respuesta se encuentra en un conjunto ordenado, podemos utilizar búsqueda binaria
+- Es altamente eficiente, pues corta el espacio de búsqueda en dos por cada iteración
+
+### Recursividad
+
+- Algorítmica: Una forma de crear soluciones utilizando el principio de "divide y vencerás"
+- Programática: Una técnica programática mediante la cual una función se llama a sí misma
+
+### Argumentos de otras funciones
+
+Las funciones también pueden recibir funciones como argumentos para crear abstracciones más poderosas.
+
+```python
+def multiplicar_por_dos(n):
+    return n * 2
+
+
+def aplicar_operacion(f, numeros):
+    resultados = []
+    for numero in numeros:
+        resultado = f(numero)
+        resultado.append(resultado)
+
+>>> nums = [1, 2, 3]
+>>> aplicar_operaciones(multiplicar_por_dos, nums)
+[2, 4, 6]
 ```
 
 ### Funciones en Expresiones/Función Anónima
