@@ -6,7 +6,8 @@
   - [El Zen de Python](#el-zen-de-python)
   - [Funciones Anónimas](#funciones-anónimas)
   - [Los Errores en el Código](#los-errores-en-el-código)
-    - [Debugging](#debugging)
+    - [Manejo de excepciones](#manejo-de-excepciones)
+  - [Trabajar con Archivos](#trabajar-con-archivos)
 - [Introducción al Pensamiento Computacional en Python](#introducción-al-pensamiento-computacional-en-python)
   - [Aproximación de Soluciones](#aproximación-de-soluciones)
   - [Búsqueda Binaria](#búsqueda-binaria)
@@ -19,11 +20,11 @@
   - [Dictionary Comprehension](#dictionary-comprehension)
   - [Pruebas de Caja Negra](#pruebas-de-caja-negra)
   - [Pruebas de Caja de Cristal](#pruebas-de-caja-de-cristal)
-  - [Debugging](#debugging-1)
+  - [Debugging](#debugging)
     - [Reglas Generales](#reglas-generales)
     - [Diseño de Experimentos](#diseño-de-experimentos)
     - [Errores Comunes](#errores-comunes)
-  - [Manejo de Excepciones](#manejo-de-excepciones)
+  - [Manejo de Excepciones](#manejo-de-excepciones-1)
     - [Excepciones Como Control de Flujo](#excepciones-como-control-de-flujo)
   - [Afirmaciones](#afirmaciones)
 - [POO](#poo)
@@ -202,13 +203,62 @@ all_multiplied = reduce(lambda a, b: a * b, my_list)
 
 **Ejemplo:**
 
-```
+```text
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ZeroDivisionError: division by zero
 ```
 
-#### Debugging
+#### Manejo de excepciones
+
+**`try`:**
+En el `try` se coloca código que esperamos que pueda lanzar algún error.
+
+**`except`:**
+En el `except` se maneja el error, es decir, si ocurre un error dentro del bloque del código `try`, se deja de ejecutar el código del `try` y se ejecuta lo que se haya definido en el `except`.
+
+**`else`:**
+El `else` se ejecuta sólo si no hubo ninguna excepción desde el `try`.
+
+**`finally`:**
+Se ejecuta **SIEMPRE**, haya sido lanzada la excepción o no.
+
+**Ejemplo:**
+
+```python
+try:
+  pass
+except Exception:
+  print('Ocurrió una excepción')
+else:
+  print('No ocurrió ninguna excepción')
+finally:
+  print('Siempre me ejecuto')
+```
+
+**`assert`**:
+`assert <condición>, <mensaje de error>`
+
+**Ejemplo:**
+
+```python
+def palindrome(string):
+  assert len(string) > 0, "No se puede ingresar una cadena vacía"
+  return string == string[::-1]
+
+>>> print(palindrome(""))
+AssertionError: No se puede ingresar una cadena vacía
+```
+
+### Trabajar con Archivos
+
+**Modos de apertura:**
+
+- R -> Lectura
+- W -> Escritura (sobrescribir)
+- A -> Escritura (agregar al final)
+
+`with open("./ruta/del/archivo.txt", "r") as f:`
 
 ## Introducción al Pensamiento Computacional en Python
 
